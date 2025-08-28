@@ -114,21 +114,3 @@ python app.py
 
 ---
 
-## Lovable AI Integration
-Use the following prompt for Lovable.ai to generate the interactive site:
-
-```
-Create an interactive, professional web platform to improve empathy, awareness, and inclusion in organizations.
-
-Features:
-- Real-time analysis of organizational culture highlighting bias, low empathy, and potential conflict.
-- Interactive simulations where employees experience scenarios with bias or microaggressions.
-- Instant feedback and alternate responses during training.
-- Behavioral analytics like engagement metrics and eye-tracking to track learning.
-- Dashboards and charts for HR and diversity benchmarking.
-- Personalized learning paths using organizational datasets.
-- Warm, inviting UI with soft colors, intuitive navigation, and gamified elements.
-- Fully responsive for desktop and mobile.
-
-Include the following pages and components: Homepage with key metrics, Real-Time Analysis Panel, Interactive Simulation Page, Analytics & Benchmarking Page, Settings & Personalization, and Footer as described.
-```
