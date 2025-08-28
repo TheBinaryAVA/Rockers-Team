@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Bias Training — 3D Desktop Experience</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HUD / Overlay -->
+  <div id="ui">
+    <div id="topbar">
+      <div id="scenarioLabel" class="italic">Scenario 1 / 10</div>
+      <div id="scoreLabel" class="italic">Score: 0</div>
+      <div id="statusLabel" class="italic">Status: Idle</div>
+    </div>
+
+    <div id="controls">
+      <button id="btnPrev" class="ui-btn italic">◀ Prev</button>
+      <button id="btnNext" class="ui-btn italic">Next ▶</button>
+      <button id="btnStartCam" class="ui-btn cam italic">Start Camera</button>
+      <button id="btnSnapshot" class="ui-btn cam italic" disabled>📸 Snapshot</button>
+      <button id="btnExport" class="ui-btn accent italic">Export Log</button>
+    </div>
+
+    <div id="responseArea">
+      <label class="italic">Your response (type + submit):</label>
+      <textarea id="responseText" rows="2" placeholder="Type your response..."></textarea>
+      <div style="display:flex; gap:8px; margin-top:6px;">
+        <button id="btnSubmitResp" class="ui-btn submit italic">Submit Response</button>
+        <button id="btnClearResp" class="ui-btn alt italic">Clear</button>
+      </div>
+    </div>
+
+    <div id="webcamPreviewWrap">
+      <video id="webcamPreview" autoplay muted playsinline></video>
+      <div id="webcamState" class="italic">Camera: off</div>
+    </div>
+
+    <div id="suggestionBox">
+      <div id="suggestionTitle" class="italic">Suggestion</div>
+      <img id="suggestionImg" src="" alt="suggestion example" />
+      <div id="suggestionText"></div>
+    </div>
+  </div>
+
+  <!-- Three.js canvas -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Scripts: face-api + three (loaded in module app.js) -->
+  <!-- face-api.js (models will be loaded from CDN in app.js) -->
+  <script src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+  <!-- main app (module because it imports three modules) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
